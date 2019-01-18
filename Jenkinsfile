@@ -1,5 +1,6 @@
 
 pipeline {
+    agent any
     
     /*agent {  //dockerfile true }
     docker { image 'database:1.2' }
@@ -22,7 +23,7 @@ pipeline {
     }
     */
     
-    agent {
+  /*  agent {
     dockerfile {
         filename '.'
        // dir 'build'
@@ -30,7 +31,7 @@ pipeline {
         registryUrl 'http://127.0.0.1:2375'
        // registryCredentialsId 'myPredefinedCredentialsInJenkins'
     }
-}
+}*/
    /* docker {
     //image "image name"
     registryUrl "http://127.0.0.1:2375"
