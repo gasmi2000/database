@@ -1,9 +1,10 @@
 
 pipeline {
-    agent {  //dockerfile true }
+    
+    /*agent {  //dockerfile true }
     docker { image 'database:1.2' }
     }
-    
+    */
 
    
 /*   okk
@@ -20,13 +21,28 @@ pipeline {
         
     }
     */
+    
+    
    
   
       
     stages {
-       
       
-          
+        stage('build and deploy') {
+      steps {
+        /*
+         * Multiline strings can be used for larger scripts. It is also possible to put scripts in your shared library
+         * and load them with 'libaryResource'
+         */
+        sh """
+          docker build -t database .
+          docker tag database registry:5000/database
+          docker push registry:5000/database
+        """
+      }
+        }
+        
+        
           
         stage('Test') {
             steps {
