@@ -28,21 +28,7 @@ pipeline {
       
     stages {
        
-       stage('Taggg') {
-          
-         
-          
-      steps {
-         
-          script {
-         docker.build registry + ":$BUILD_NUMBER"
-           //  sh "docker tag database:1.0 registry:5000/database:1.0"
-        }
-         
-         
-        //sh "docker tag database:1.0 registry:5000/database:1.0"
-      }
-       }
+      
           
           
         stage('Test') {
