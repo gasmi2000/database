@@ -26,6 +26,7 @@ pipeline {
       steps {
         sh "docker tag database:1.0 registry:5000/database:1.0"
       }
+       }
           
           
         stage('Test') {
