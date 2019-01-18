@@ -23,13 +23,13 @@ pipeline {
     */
     
     
-    agent { //any
-    docker {
+    agent any
+   /* docker {
     //image "image name"
     registryUrl "http://127.0.0.1:2375"
     //registryCredentialsId "credsId"
-  }
-          }
+  }*/
+        
       
     stages {
       
