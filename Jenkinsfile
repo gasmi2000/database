@@ -4,6 +4,12 @@ pipeline {
     docker { image 'database' }
           */
     
+    environment {
+    registry = "registry:5000/database"
+   // registryCredential = 'dockerhub'
+  }
+   
+   
     agent {
         
     dockerfile {
@@ -23,8 +29,18 @@ pipeline {
     stages {
        
        stage('Taggg') {
+          
+         
+          
       steps {
-        sh "docker tag database:1.0 registry:5000/database:1.0"
+         
+          script {
+        //  docker.build registry + ":$BUILD_NUMBER"
+             sh "docker tag database:1.0 registry:5000/database:1.0"
+        }
+         
+         
+        //sh "docker tag database:1.0 registry:5000/database:1.0"
       }
        }
           
