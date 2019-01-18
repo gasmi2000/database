@@ -23,7 +23,10 @@ pipeline {
     */
     
     
-   
+   agent {
+       
+   }
+    
   
       
     stages {
