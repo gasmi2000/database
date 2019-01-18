@@ -1,15 +1,12 @@
 
 pipeline {
-   /* agent { dockerfile true }
-    docker { image 'database' }
-          */
+    agent {  //dockerfile true }
+    docker { image 'database:1.2' }
+    }
     
-    environment {
-    registry = "registry:5000/database"
-   // registryCredential = 'dockerhub'
-  }
+
    
-   
+/*   okk
     agent {
         
     dockerfile {
@@ -22,7 +19,7 @@ pipeline {
     }
         
     }
-    
+    */
    
   
       
