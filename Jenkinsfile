@@ -12,7 +12,7 @@ pipeline {
         //label 'my-defined-label'
         additionalBuildArgs  '-t database:1.0'
         //args '-v /tmp:/tmp'
-       registryUrl 'tcp://registry:5000'
+       registryUrl 'http://registry:5000'
     }
         
     }
