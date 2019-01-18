@@ -17,7 +17,17 @@ pipeline {
         
     }
     
+   
+  
+      
     stages {
+       
+       stage('Taggg') {
+      steps {
+        sh "docker tag database:1.0 registry:5000/database:1.0"
+      }
+          
+          
         stage('Test') {
             steps {
                 echo 'hello gasmi'
