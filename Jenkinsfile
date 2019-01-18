@@ -22,8 +22,15 @@ pipeline {
     }
     */
     
-    
-    agent any
+    agent {
+    dockerfile {
+        filename '.'
+       // dir 'build'
+       // label 'my-defined-label'
+        registryUrl 'http://127.0.0.1:2375'
+       // registryCredentialsId 'myPredefinedCredentialsInJenkins'
+    }
+}
    /* docker {
     //image "image name"
     registryUrl "http://127.0.0.1:2375"
