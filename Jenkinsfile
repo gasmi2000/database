@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'hello gasmi'
             }
+            
         }
     }
 }
