@@ -35,8 +35,8 @@ pipeline {
       steps {
          
           script {
-        //  docker.build registry + ":$BUILD_NUMBER"
-             sh "docker tag database:1.0 registry:5000/database:1.0"
+         docker.build registry + ":$BUILD_NUMBER"
+           //  sh "docker tag database:1.0 registry:5000/database:1.0"
         }
          
          
