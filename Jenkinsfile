@@ -23,9 +23,7 @@ pipeline {
     */
     
     
-   agent {
-       
-   }
+    agent any
     
   
       
